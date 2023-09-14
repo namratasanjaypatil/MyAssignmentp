@@ -1,0 +1,242 @@
+What Is class in Object Oriented Programming Language ?
+
+    (1) Data Members (Attributes/Fields): These are variables that store data within the class. They define the characteristics or properties of objects created from the class.
+
+    (2) Member Functions (Methods): These are functions defined within the class, which can operate on the class's data members. They define the behavior or actions that objects of the class can perform.
+
+    (3) Access Specifiers: C++ provides three access specifiers to control the visibility of class members:
+
+        public: Members declared as public are accessible from anywhere.
+        private: Members declared as private are only accessible from within the class itself.
+        protected: Members declared as protected are similar to private but have some access in derived classes.
+
+    (4) Constructor: A constructor is a special member function that is called when an object of the class is created. It initializes the object's data members.
+
+    (5) Destructor: A destructor is another special member function that is called when an object goes out of scope or is explicitly destroyed. It is responsible for cleaning up resources and releasing memory.
+
+
+
+What is an Object in Object Oriented Programming Language ?
+
+    Attributes (Data Members): Objects can have attributes or data members, which are variables that store information about the object's state. These data members can be of various data types, including fundamental data types (integers, floats, etc.) or even other user-defined data types (other classes or structures).
+
+    Methods (Member Functions): Objects can also have methods or member functions, which are functions that define the behavior or actions that the object can perform. These methods can manipulate the object's attributes and perform various operations related to the object's functionality.
+
+    Encapsulation: Objects encapsulate both data (attributes) and behavior (methods). This encapsulation provides a way to hide the internal details of an object from the outside world, exposing only the necessary interfaces to interact with it. This concept helps in maintaining data integrity and reducing the complexity of the code.
+
+    Inheritance: Objects can participate in inheritance hierarchies. In C++, you can create new classes (derived or child classes) that inherit attributes and methods from existing classes (base or parent classes). This allows for code reuse and the creation of specialized objects based on more general ones.
+
+    Polymorphism: Objects can exhibit polymorphic behavior. Polymorphism allows different objects to respond to the same method call in different ways, based on their individual implementations of that method. This concept promotes flexibility and code extensibility.
+
+
+
+What Is Difference Between Class And Interface ?
+
+    Purpose and Usage:
+
+    Class: A class in C++ is a blueprint for creating objects. It defines both the data members (attributes or properties) and member functions (methods or behaviors) that the objects of the class will have. You can create instances of a class, and these instances will have the properties and behaviors defined by the class.
+
+    Interface: An interface in C++ is a pure abstract class that defines a contract or a set of abstract methods that must be implemented by any class that inherits from it. Interfaces are used to define a common set of methods that multiple classes can adhere to, allowing for polymorphism and a degree of abstraction in your code.
+
+    Member Definitions:
+
+    Class: In a class, you can have both data members (variables) and member functions (methods) with varying levels of access control (public, private, protected).
+
+    Interface: An interface contains only pure virtual functions (abstract methods), and all members are public by default. Classes inheriting from an interface must provide concrete implementations for all the methods declared in the interface.
+
+    Inheritance:
+
+    Class: In C++, classes support single inheritance (a class can inherit from only one base class) and multiple inheritance (a class can inherit from multiple base classes). You can create a hierarchy of classes with different levels of abstraction and specialization.
+
+    Interface: Interfaces are typically used to achieve a form of multiple inheritance, where a class can inherit from multiple interfaces to adhere to multiple contracts. This helps in achieving a level of code reusability and flexibility.
+
+    Object Creation:
+
+    Class: Objects can be created from classes, and these objects can store data and perform actions based on the class's member functions.
+
+    Interface: You cannot create objects directly from interfaces. Instead, you create objects from classes that implement the interface and provide concrete implementations for its methods.
+
+    Implementation:
+
+    Class: Classes can have both the interface (public methods) and the implementation (actual code inside methods) bundled together.
+
+    Interface: Interfaces only declare the method signatures (names and parameter lists) without providing any implementation details. The implementation is left to the classes that inherit from the interface.
+
+
+What Is Method Overloading in Object Oriented Programming Language ?
+
+    Method overloading is a feature in object-oriented programming languages like C++ that allows you to define multiple functions in a class with the same name but with different parameters. The key difference between these functions is the number or type of parameters they accept. C++ uses the method's signature (the combination of its name and parameter list) to differentiate between overloaded methods.
+
+
+What Is Data hiding in Object Oriented Programming Language ?
+
+    Data hiding is an object-oriented programming (OOP) technique specifically used to hide internal object details (i.e., data members). Data hiding guarantees exclusive data access to class members only and protects and maintains object integrity by preventing intended or unintended changes and intrusions.
+
+
+
+What are the differences between abstract classes and interfaces ?
+
+    (1) Definition:
+
+        Abstract Class:
+            An abstract class is a class that cannot be instantiated on its own.
+            It may have both concrete (implemented) methods and abstract (unimplemented) methods.
+            Abstract classes can have member variables (data members).
+        Interface:
+            An interface is a class-like structure that contains only pure virtual (abstract) methods.
+            Interfaces do not have any member variables (data members) or concrete method implementations.
+
+    (2) Inheritance:
+
+        Abstract Class:
+            A class can inherit from only one abstract class at a time using the "public" or "protected" keyword.
+            Abstract classes support a limited form of multiple inheritance when used as base classes.
+        Interface:
+            A class can implement multiple interfaces at the same time.
+            Interfaces are often used to achieve multiple inheritance in C++ by allowing a class to implement multiple interfaces.
+
+    (3) Instantiation:
+
+        Abstract Class:
+            You cannot create an instance (object) of an abstract class.
+            Abstract classes are meant to be subclassed, and objects of concrete subclasses can be created.
+        Interface:
+            You cannot create an instance of an interface itself.
+            You can only create objects of classes that implement the interface.
+    (4) Method Implementation:
+
+        Abstract Class:
+            Can provide both abstract (pure virtual) methods and concrete method implementations.
+            Subclasses are required to provide implementations for all abstract methods, but they can also override or use the concrete methods provided.
+        Interface:
+            Contains only pure virtual (abstract) methods, which are meant to be implemented by classes that implement the interface.
+            Implementing classes must provide implementations for all methods defined in the interface.
+
+    (5) Purpose:
+
+        Abstract Class:
+            Typically used when you have a base class that provides a common set of attributes and some default behavior, and subclasses need to extend or override parts of it.
+        Interface:
+            Used to define a contract that classes must adhere to without providing any implementation details. Interfaces are used to ensure that classes implement specific functionality.
+
+
+
+What are the Virtual Function on in Object Oriented Programming ?
+
+    A virtual function is a member function which is declared within a base class and is overridden by a derived class. Now, when you refer to a derived class object using a pointer to the base class, you can call a virtual function for that object and execute the derived class's version of that particular function.
+
+
+
+What is Constructor in Object Oriented Programming ?
+
+In class-based, object-oriented programming, a constructor (abbreviation: ctor) is a special type of function called to create an object. It prepares the new object for use, often accepting arguments that the constructor uses to set required member variables.
+
+    (1) Name Same as Class: The constructor has the same name as the class it belongs to. It doesn't have a return type, not even void.
+
+    (2) Automatic Invocation: Constructors are automatically invoked when an object of the class is created. You don't need to call them explicitly like regular functions.
+
+    (3) Initialization: Constructors are used to initialize the data members of the object. This ensures that the object is in a valid state when it's created.
+
+    (4) Multiple Constructors: A class can have multiple constructors, which is known as constructor overloading. You can define different constructors with different parameter lists to provide various ways of initializing objects.
+
+    (5) Default Constructor: If you don't provide any constructors in your class, C++ will provide a default constructor with no arguments for you. It does nothing in terms of initialization, so it's often necessary to define your own constructors if you need specific initialization logic.
+
+
+
+What is Abstract class in Object Oriented Programming ?
+
+    (1) Abstract classes cannot be instantiated: You cannot create objects directly from an abstract class. Instead, you must create derived classes (also known as concrete classes) that inherit from the abstract class.
+
+    (2) Abstract classes can have pure virtual functions: Abstract classes often define one or more pure virtual functions, which are declared with the virtual keyword and have no implementation in the abstract class. These pure virtual functions must be implemented in any derived class.
+
+    (3) Abstract classes may have non-virtual functions: Abstract classes can have regular (non-virtual) member functions with implementations. These functions can provide common behavior or functionality that can be reused by the derived classes.
+
+
+What is Final Key word in Object Oriented Programming ?
+
+    In Object-Oriented Programming (OOP) using C++, the final keyword is used to indicate that a class or a member function should not be further derived or overridden by any derived class. This is used to restrict the inheritance or overriding of certain classes or functions to maintain the desired behavior and prevent further modification.
+
+    Final keyword in C++ when added to a function, prevents it from being overridden by derived classes. Also when added to a class prevents inheritance of any type. Consider the following example which shows use of final specifier. This program fails in compilation.
+
+
+
+What is Pure Virtual funtion in Object Oriented Programming ?
+
+    A pure virtual function in c++ is a virtual function for which we do not have an implementation. We do not write any functionality in it. Instead, we only declare this function. A pure virtual function does not carry any definition related to its base class.
+
+
+
+What are Sealed Modifier in Object Oriented Programming ?
+
+    In C++, there is no direct "sealed" keyword like there is in some other programming languages like C# or Java. However, the concept of sealing classes or methods can be achieved through a combination of access specifiers and inheritance control mechanisms.
+
+
+What is Dynamic or run time Polymorphism in oops ?
+
+    Dynamic or runtime polymorphism is a fundamental concept in object-oriented programming (OOP) that allows objects of different classes to be treated as objects of a common base class. This concept enables a program to determine the actual type of an object at runtime and invoke the appropriate method or behavior associated with that specific type. Dynamic polymorphism is achieved through method overriding and virtual functions in many OOP languages, such as C++, Java, and C#.
+
+    Here are the key components and steps involved in achieving dynamic polymorphism:
+
+        (1) Inheritance: Dynamic polymorphism relies on the inheritance hierarchy. You have a base class (also known as a superclass) and one or more derived classes (also known as subclasses) that inherit from the base class.
+
+        (2) Method Overriding: In the derived classes, you can define methods that have the same name, return type, and parameters as methods in the base class. This process is called method overriding. The overridden method in the derived class should provide a specific implementation.
+
+        (3) Virtual Functions (in C++): In C++, you can declare a method as virtual in the base class using the virtual keyword. This indicates that the method can be overridden in derived classes. In other OOP languages like Java and C#, all non-static methods are implicitly virtual.
+
+        (4) Dynamic Binding: When you call a method on an object, the decision about which method to invoke is made at runtime based on the actual type of the object. This process is known as dynamic binding.
+
+
+What is Access Modifier in Object Oriented Programming ?
+
+    Access modifiers in object-oriented programming (OOP) are keywords or visibility controls that determine the accessibility or visibility of classes, methods, variables, or other members within a class. They help define the level of encapsulation and control over the data and behavior of objects. In most programming languages that support OOP, there are typically four primary access modifiers:
+
+        (1) Public: Members declared as public are accessible from any part of the program. This means they can be accessed by objects of the class, as well as from outside the class. Public members are often used for methods and variables that are intended to be part of the class's public interface.
+
+        (2) Private: Members declared as private are only accessible within the class in which they are declared. They are not accessible from outside the class, not even by objects of the same class. Private members are used to encapsulate the internal implementation details of a class, hiding them from external code.
+
+        (3) Protected: Members declared as protected are similar to private members in that they are not accessible from outside the class. However, they are accessible by derived (sub) classes or subclasses. Protected members are often used when you want to provide access to derived classes but still hide them from external code.
+
+        (4) Package (Default): Some programming languages have a package-level or default access modifier. Members with default access are accessible within the same package or module but not outside it. This provides a level of encapsulation for classes and their members within a specific package.
+
+
+
+What is Friend Function in Object Oriented Programming ?
+
+    In object-oriented programming (OOP), a friend function is a special function that is not a member of a class but is granted special access to the private and protected members of that class. Friend functions are typically used to allow external functions or classes to work with a class's private or protected data without violating encapsulation principles.
+
+    Here are some key points about friend functions:
+
+        (1) Not a Member of the Class: Friend functions are not members of the class they are associated with. They are declared and defined outside of the class, typically in the same namespace as the class.
+
+        (2) Access to Private and Protected Members: A friend function is given the privilege to access and modify private and protected members of the class it is a friend of. This allows for more flexibility in terms of data manipulation while still maintaining some level of data hiding.
+
+        (3) Declared Using the friend Keyword: To declare a function as a friend of a class, you use the friend keyword in the class declaration. For example:
+
+        (4) Global or in Another Class: Friend functions can be defined globally or within another class. However, they are not part of the class itself and do not have access to the class's `this` pointer.
+
+        (5) Use Cases: Friend functions are often used in situations where you need to overload operators (e.g., `<<` and `>>` for input and output streams) or implement certain utility functions that need access to private data members.
+
+
+
+What is Overriding in Object Oriented Programming ?
+
+    Overriding is a concept in object-oriented programming (OOP) that allows a subclass or derived class to provide a specific implementation for a method that is already defined in its superclass or base class. In other words, when a subclass defines a method with the same name, return type, and parameters as a method in its superclass, it is said to be overriding the method.
+
+    Here are some key points about method overriding in OOP:
+
+        (1) Inheritance: Overriding is closely related to the concept of inheritance, where a subclass inherits attributes and behaviors (methods) from its superclass. When you override a method, you're customizing the behavior of that method in the subclass while still maintaining the inheritance hierarchy.
+
+        (2) Method Signature: To successfully override a method, the method in the subclass must have the same method signature as the method in the superclass. This means that they must have the same method name, the same return type, and the same parameter types (in the same order).
+
+        (3) Access Modifiers: The access modifier of the overridden method in the subclass must be the same or less restrictive than the access modifier of the method in the superclass. For example, if the superclass method is declared as "protected," the overriding method in the subclass can be "protected" or "public," but not "private."
+
+        (4) @Override Annotation (Java): In some programming languages like Java, you can use the @Override annotation before the method in the subclass to explicitly indicate that you intend to override a method from the superclass. This annotation helps catch errors at compile-time if you don't have a proper override signature.
+
+        (5) Polymorphism: Method overriding plays a crucial role in achieving polymorphism in OOP. When you have a reference to an object of the superclass, but it points to an instance of the subclass, calling an overridden method will execute the subclass's implementation. This allows you to write more generic code that can work with objects of different subclasses.
+
+
+What is the role of mutable storage class specifier ?
+
+    In C++, there is no storage class specifier called "mutable." The storage class specifiers in C++ are "auto," "register," "static," "extern," and "thread_local." These specifiers are used to define the storage duration and linkage of variables, but none of them are called "mutable."
+
+    However, the term "mutable" is related to the C++ programming language, but it is not a storage class specifier. In C++, "mutable" is used as a keyword in the context of member variables in classes. When you declare a member variable as "mutable" within a class, it indicates that the variable can be modified even in a const member function of that class.
